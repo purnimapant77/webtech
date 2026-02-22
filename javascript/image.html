@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Image Slider</title>
+    <style>
+        body{
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .slider{
+            width: 400px;
+            height: 250px;
+            margin: 20px auto;
+            position: relative;
+        }
+
+        .slider img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        button{
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Simple Image Slider</h2>
+
+    <div class="slider">
+        <img id="slide" src="https://picsum.photos/id/1015/400/250">
+    </div>
+
+    <button onclick="prevImage()">Previous</button>
+    <button onclick="nextImage()">Next</button>
+    <script>
+        var images = [
+            "https://place-puppy.com/400x250",
+            "https://place-puppy.com/401x251",
+            "https://place-puppy.com/402x252",
+            "https://place-puppy.com/403x253",
+            "https://place-puppy.com/404x254",
+            "https://place-puppy.com/405x255",
+            "https://place-puppy.com/406x256",
+            "https://place-puppy.com/407x257",
+            "https://place-puppy.com/408x258",
+            "https://place-puppy.com/409x259"
+        ];
+        var index = 0;
+        function showImage() {
+            document.getElementById("slide").src = images[index];
+        }
+        function nextImage() {
+            index++;
+            if(index >= images.length){
+                index = 0;   
+            }
+            showImage();
+        }
+        function prevImage() {
+            index--;
+            if(index < 0){
+                index = images.length - 1;  
+            }
+            showImage();
+        }
+    </script>
+
+</body>
+</html>

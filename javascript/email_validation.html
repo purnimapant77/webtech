@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>email_validation</title>
+</head>
+<body>
+    <form onsubmit="return validate()">
+        Email:<input type="text" name="email" id="email" placeholder="please enter your email">
+        <span id="email_error"></span>
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        function validate(){
+            var email=document.getElementById("email").value;
+            var pattern=/^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
+            if(email.trim()==""){
+                document.getElementById("email_error").innerText="Please enter email";
+                return false;
+            }
+            if(!email.match(pattern)){
+                document.getElementById("email_error").innerText="Email pattern dosent match";
+                return false
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>

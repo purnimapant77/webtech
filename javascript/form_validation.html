@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+        
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="form_box">
+            <h2>Register</h2>
+            <form method="POST" onsubmit="return validate()">
+
+                <label>First Name:</label>
+                <input type="text" placeholder="First Name" id="first_name" name="first_name">
+                <span id="first_name_error"></span>
+                <br><br>
+
+                <label>Middle Name:</label>
+                <input type="text" placeholder="Middle Name" id="middle_name" name="middle_name">
+                <span id="middle_name_error"></span>
+                <br><br>
+
+                <label>Last Name:</label>
+                <input type="text" placeholder="last Name" id="last_name" name="last_name">
+                <span id="last_name_error"></span>
+                <br><br>
+
+                <label>Gender:</label>
+                <div class="gender">
+                    <label><input type="radio" name="gender" value="Male" id="male">Male</label>
+                    <label><input type="radio" name="gender" value="Female" id="female">Female</label>
+                    <label><input type="radio" name="gender" value="Others" id="others">Others</label>
+                </div>
+                <span id="gender_error"></span>
+                <br><br>
+
+                <label>Email or Phone Number:</label>
+                <input type="text" placeholder="Email or Phone Number" id="contact" >
+                <span id="contact_error"></span>
+                <br><br>
+
+                <label>Password:</label>
+                <input type="password" placeholder="Password" id="password" >
+                <span id="password_error"></span>
+                <br><br>
+
+                <label>
+                    <input type="checkbox" name="terms" id="terms">
+                    <a href="#">I agree all the terms and conditions</a>
+                </label>
+                <span id="checkbox_error"></span>
+                <br><br>
+
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function validate() {
+            let first_name = document.getElementById('first_name').value
+            let middle_name = document.getElementById('middle_name').value
+            let last_name = document.getElementById('last_name').value
+            let contact = document.getElementById('contact').value
+            let password = document.getElementById('password').value
+             //validation for first name
+            if (first_name.trim() === "") {
+                document.getElementById('first_name_error').innerText = "please enter your first name";
+                return false
+            }
+            if (!/^[a-zA-Z]+$/.test(first_name.trim())) {
+                document.getElementById('first_name_error').innerText = "Invalid name format";
+                return false;
+            }
+
+            //Validation for middle name
+            if (middle_name.trim() !== "" && !/^[a-zA-Z]+$/.test(middle_name.trim())) {
+                document.getElementById('middle_name_error').innerText = "Invalid name format";
+                return false;
+            }
+
+            //Validation for last name
+            if (last_name.trim() === "") {
+                document.getElementById('last_name_error').innerText = "please enter last name";
+                return false
+            }
+            if (!/^[a-zA-Z]+$/.test(first_name.trim())) {
+                document.getElementById('last_name_error').innerText = "Invalid name format";
+                return false;
+            }
+
+            //Validation for radiobox i.e gender
+            let male=document.getElementById("male").checked;
+            let female=document.getElementById("female").checked;
+            let others=document.getElementById("others").checked;
+            if(male==false && female==false && others==false){
+                document.getElementById('gender_error').innerText="Please select you gender";
+                return false;
+            }
+
+
+            //validation for contact
+            let email_pattern = /^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
+            let phone_pattern = /^[0-9]{10}$/;
+            if (contact.trim() === "") {
+                document.getElementById('contact_error').innerHTML = "Please enter your email or phone number";
+                return false
+            }
+            else if (!email_pattern.test(contact) && !phone_pattern.test(contact)) {
+            document.getElementById('contact_error').innerText = "Enter a valid email or 10-digit phone number";
+            return false;
+            }
+        
+
+            //Validation for password
+            if (password.trim() === "" || password.length < 8) {
+                document.getElementById('password_error').innerHTML = "The password must be of at least 8 characters";
+                return false
+            }
+
+            //Validation for checkbox
+           let terms=document.getElementById("terms").checked;
+           if(terms==false){
+            document.getElementById("checkbox_error").innerText="Please accept our terms and conditions";
+            return false;
+           }
+
+
+        return true
+        }
+    </script>
+</body>
+
+</html>
