@@ -1,0 +1,4 @@
+Smrity,50,Udaypur
+Dristi,30,Bhaktapur
+Shristi,10,Parbat
+Sushsna,20,Kathmandu
