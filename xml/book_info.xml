@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<books>
+    <book>
+        <title>Learn XML Basics</title>
+        <author>ithya Adhakari<author>
+        <isbn>978-1234567890</isbn>
+        <publisher>Knowledge Press</publisher>
+        <edition>1st</edition>
+        <price>25.99</price>
+    </book>
+    <book>
+        <title>Advanced PHP</title>
+        <author>Aasmu pandey</author>
+        <isbn>978-0987654321</isbn>
+        <publisher>Tech World</publisher>
+        <edition>2nd</edition>
+        <price>39.50</price>
+    </book>
+</books>
