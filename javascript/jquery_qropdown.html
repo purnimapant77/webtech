@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dropdown using Jquery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+    <h2>Select yout favourite subject</h2>
+
+    <select id="course">
+        <option value="1">Computer Science</option>
+        <option value="2">Physics</option>
+        <option value="3">Mathematics</option>
+        <option value="4">Chenistry</option>
+    </select>
+
+    <br><br>
+
+    <button id="btn">Get Selected</button>
+
+    <h3 id="result"></h3>
+
+    <script>
+        $(document).ready(function(){
+
+            $("#btn").click(function(){
+
+                var value = $("#course").val();
+
+                var text = $("#course option:selected").text();
+                $("#result").html(
+                    "Selected Value: " + value + "<br>" +
+                    "Selected Text: " + text
+                );
+            });
+
+        });
+    </script>
+
+</body>
+</html>
