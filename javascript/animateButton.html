@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sequential Animation</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: coral;
+            margin: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Animate Width, Height and Opacity</h2>
+
+<button id="animateButton">Click Me</button>
+
+<div id="box"></div>
+
+<script>
+$(document).ready(function(){
+
+    $("#animateButton").click(function(){
+
+        $("#box")
+            .animate({ width: "300px" }, 1000)     
+            .animate({ height: "300px" }, 1000)   
+            .animate({ opacity: 0.3 }, 1000)       
+            .animate({ opacity: 1 }, 1000);        
+
+    });
+
+});
+</script>
+
+</body>
+</html>
