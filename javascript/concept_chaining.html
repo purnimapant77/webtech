@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Concept of chaining</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+<h2>Chaining with slideUp and slideDown</h2>
+
+<button id="btn">Click Here</button>
+
+<div id="box" style="width:200px; height:200px; background-color:skyblue; margin-top:20px;">
+    Hello Student
+</div>
+
+<script>
+$(document).ready(function(){
+
+    $("#btn").click(function(){
+
+        $("#box")
+            .slideUp(1000)    
+            .slideDown(1000)   
+            .slideUp(500)      
+            .slideDown(500);   
+
+    });
+
+});
+</script>
+
+</body>
+</html>
