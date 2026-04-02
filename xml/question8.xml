@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE student [
+  <!ELEMENT student (name, address, rollno, phone)>
+  <!ELEMENT name (#PCDATA)>
+  <!ELEMENT address (#PCDATA)>
+  <!ELEMENT rollno (#PCDATA)>
+  <!ELEMENT phone (#PCDATA)>
+]>
+<student>
+  <name>Ram Kumar</name>
+  <address>Kathmandu</address>
+  <rollno>3001</rollno>
+  <phone>9800000001</phone>
+</student>

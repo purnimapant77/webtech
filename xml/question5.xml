@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<songs>
+  <song>
+    <name>Song One</name>
+    <singer>Singer A</singer>
+    <composedby>Composer A</composedby>
+    <length>3:30</length>
+  </song>
+  <song>
+    <name>Song Two</name>
+    <singer>Singer B</singer>
+    <composedby>Composer B</composedby>
+    <length>4:00</length>
+  </song>
+  <song>
+    <name>Song Three</name>
+    <singer>Singer C</singer>
+    <composedby>Composer C</composedby>
+    <length>3:15</length>
+  </song>
+  <song>
+    <name>Song Four</name>
+    <singer>Singer D</singer>
+    <composedby>Composer D</composedby>
+    <length>2:50</length>
+  </song>
+</songs>
