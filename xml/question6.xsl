@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0"
-xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
   <xsl:template match="/">
     <html>
+      <head>
+        <title>Book List</title>
+      </head>
+
       <body>
         <h2>Book List</h2>
+
         <table border="1">
           <tr>
             <th>Title</th>
@@ -12,6 +18,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
             <th>Publisher</th>
             <th>Year</th>
           </tr>
+
           <xsl:for-each select="books/book">
             <tr>
               <td><xsl:value-of select="title"/></td>
@@ -20,8 +27,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
               <td><xsl:value-of select="year"/></td>
             </tr>
           </xsl:for-each>
+
         </table>
+
       </body>
     </html>
   </xsl:template>
+
 </xsl:stylesheet>

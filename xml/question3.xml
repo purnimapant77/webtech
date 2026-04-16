@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<books>
+<books xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="question3.xsd">
+
   <book isbn="101">
     <name>
       <firstname>Harry</firstname>
       <middlename>James</middlename>
       <lastname>Potter</lastname>
     </name>
+
     <author>J.K Rowling</author>
     <author>John Smith</author>
+
     <pageno>300</pageno>
     <price>500</price>
   </book>
+
 </books>

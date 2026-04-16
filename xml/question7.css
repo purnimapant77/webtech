@@ -1,0 +1,36 @@
+contacts {
+  display: block;
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+person {
+  display: block;
+  border: 1px solid #333;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #f5f5f5;
+}
+
+name {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  color: darkblue;
+  margin-bottom: 5px;
+}
+
+address, city, email, phone {
+  display: block;
+  margin-left: 10px;
+  padding: 2px 0;
+}
+
+email {
+  color: green;
+}
+
+phone {
+  color: darkred;
+  font-weight: bold;
+}
