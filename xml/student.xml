@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<result>
+    <student1>
+        <name>Pathak</name>
+        <physics>7</physics>
+        <nepali>70</nepali>
+    </student1>
+    <stdudent2>
+        <name>AAsha</name>
+        <physics>100</physics>
+        <nepali>12</nepali>
+    </stdudent2>
+    <student3>
+        <name>Ananya</name>
+        <physics>98</physics>
+        <nepali>98</nepali>
+    </student3>
+</result>
