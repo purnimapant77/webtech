@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event handling</title>
+</head>
+<body>
+    <script>
+        function show_message(){
+            document.getElementById("msg").innerHTML="Event occured!!!!"
+            
+        }
+
+        function message(){
+        x=document.getElementById("txt").innerHTML;
+        document.write(x);
+
+        }
+    </script>
+    <h2>Javascript event handling</h2>
+    <p id="msg">Perform the event for action</p>
+    <button onclick="show_message()">click me</button>
+
+
+    <h2>Another event</h2>
+    <p id="txt">hehe hehe huhu huhu</p>
+    <button onclick="message()">click here</button>
+</body>
+</html>
